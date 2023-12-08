@@ -13,7 +13,7 @@ MAC: brew install gnuplot
 
 LINUX: apt-get install gnuplot
 
-The code can be runned with the commande "make" typed in a terminal opened in the same directory.
+The code can be simply runned with the commande "make" typed in a terminal opened in the same directory.
 
 # Usage
 
