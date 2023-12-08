@@ -1,5 +1,5 @@
 # CCBounce
-This is a piece of C++ code to Calculate Bounce action and tunneling temperature in a conformal model.
+This is a piece of C++ code to Calculate Bounce action and tunneling temperature in cosmological first-order phase transition scenarios.
 
 # Requirements
 
