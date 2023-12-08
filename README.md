@@ -27,6 +27,6 @@ Most of the lines of code are commented to help the user to understand its struc
 
 Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model):
 1) Plot the scalar potential,
-2) Calculate and plot the bouncing trajectory at a given temperature T,
-3) Compute tables of bounce action for a list of values of gauge coupling constant g_X and temperature T,
+2) Calculate and plot the tunneling trajectory at a given temperature T,
+3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values,
 4) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H.
