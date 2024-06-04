@@ -67,7 +67,7 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-**3) Compute tables of bounce action values for a list of gauge coupling constant $$g_D$$ and temperature T values**
+**3) Compute tables of bounce action values for a list of gauge coupling constant $g_D$ and temperature T values**
 
    <figure>
   <img src="output/bounce_action.png" width="500" align="center">
@@ -76,7 +76,7 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-**5) Calculate the nucleation temperature $$T_n$$ and the phase transition completion rate $$\beta/H$$**
+**5) Calculate the nucleation temperature $T_n$ and the phase transition completion rate $\beta/H$**
 
 
 ## Citing
