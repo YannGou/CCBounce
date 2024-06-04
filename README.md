@@ -39,7 +39,7 @@ Without any modification of the code, you can already use it to perform four tas
 1) Plot the scalar potential,
 
 <figure>
-  <img src="[https://github.com/james-alvey-42/jaxsp/blob/c23a854ffbaeaa7e81a07ff5d860efd0b212f534/images/leoII.png](https://www.dropbox.com/scl/fi/h6lybs59lrlbd08430h5l/potential.eps?rlkey=lo0u0v3zmp5r5y3a79ii8vsuh&dl=0)" alt="" width="500" align="center">
+  <img src="[https://www.dropbox.com/scl/fi/h6lybs59lrlbd08430h5l/potential.eps?rlkey=lo0u0v3zmp5r5y3a79ii8vsuh&dl=0](https://www.dropbox.com/scl/fi/h6lybs59lrlbd08430h5l/potential.eps?rlkey=lo0u0v3zmp5r5y3a79ii8vsuh&dl=0)" alt="" width="500" align="center">
   <figcaption align="center">
   Coleman-Weinberg potential
   </figcaption>
