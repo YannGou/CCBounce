@@ -1,3 +1,8 @@
+<div align="center">
+<img
+src="output/drawing_potential_tunneling.png" alt="logo" width="150"></img>
+</div>
+
 ## CCBounce: A C++ code to Calculate Bounce action and tunneling temperature in cosmological first-order phase transition scenarios.
 [**Requirements**](#Requirements)
 | [**Usage**](#Usage)
