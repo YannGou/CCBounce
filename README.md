@@ -79,6 +79,8 @@ Without any modification of the code, you can already use it to perform four tas
 **5) Calculate the nucleation temperature $T_n$ and the phase transition completion rate $\beta/H$**
 
 
+
+
 ## Citing
 If you found the code useful for your project, you can give credit by citing the companion paper:
 
