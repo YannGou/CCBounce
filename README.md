@@ -1,21 +1,31 @@
-# CCBounce
-A C++ code to Calculate Bounce action and tunneling temperature in cosmological first-order phase transition scenarios.
+## CCBounce: A C++ code to Calculate Bounce action and tunneling temperature in cosmological first-order phase transition scenarios.
+[**Requirements**](#Requirements)
+| [**Usage**](#Usage)
+| [**Cite**](#Cite)
 
-# Requirements
+## Requirements
 
 It only requires a c++ compiler. 	You can adapt the following line in the makefile to your system:
 
-"g++  -std=c++11 CCBounce.cpp -o a.out && ./a.out"
+```console
+$ g++  -std=c++11 CCBounce.cpp -o a.out && ./a.out
+```
 
 For visualization, it is required to install GNUPLOT:
 
-MAC: brew install gnuplot
+MAC: 
+```console
+$ brew install gnuplot
+```
 
-LINUX: apt-get install gnuplot
+LINUX:
+```console
+$ apt-get install gnuplot
+```
 
 The code can be simply runned with the commande "make" typed in a terminal opened in the same directory.
 
-# Usage
+## Usage
 
 The software calculates the bounce action with an over-shooting/under-shooting method, using Runge-Kutta order 5 with adaptive step-size.
 Then it compares it with the critical action, calculate the nucleation temperature and the phase transition completion rate \beta/H.
@@ -31,7 +41,7 @@ Without any modification of the code, you can already use it to perform four tas
 3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values,
 4) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H.
 
-# Cite
+## Cite
 Please cite with bibtex:
 
 @article{Gouttenoire:2023pxh,
