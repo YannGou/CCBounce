@@ -37,6 +37,8 @@ typed in a terminal opened in the same directory.
 **This is a research project. Expect bugs, report bugs, fix more bugs than you
 create.**
 
+**Contact:** yann.gouttenoire@gmail.com
+
 ## Usage
 
 The software calculates the bounce action with an over-shooting/under-shooting method, using Runge-Kutta order 5 with adaptive step-size.
