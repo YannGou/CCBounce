@@ -38,8 +38,9 @@ Most of the lines of code are commented to help the user to understand its struc
 Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model):
 1) Plot the scalar potential,
 
+
 <figure>
-  <img src="https://github.com/YannGou/CCBounce/blob/d9736666eb098b4879c6006cb54d5e37a01658be/output/bounce_action.pdf" width="500" align="center">
+  <img src="https://github.com/YannGou/CCBounce/blob/d9736666eb098b4879c6006cb54d5e37a01658be/output/bounce_action.png" width="500" align="center">
   <figcaption align="center">
   Coleman-Weinberg potential
   </figcaption>
