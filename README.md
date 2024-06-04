@@ -43,7 +43,8 @@ The scale-invariant SU(2)_D model is also embedded.
 It is straightforward to extend the code to any other phase transition model (scale-invariant or not).
 Most of the lines of code are commented to help the user to understand its structure and implement any modifications.
 
-Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model):
+Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model).
+
 **1) Plot the scalar potential**
    
 <figure>
