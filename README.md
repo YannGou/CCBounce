@@ -30,3 +30,16 @@ Without any modification of the code, you can already use it to perform four tas
 2) Calculate and plot the tunneling trajectory at a given temperature T,
 3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values,
 4) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H.
+
+# Cite
+Please cite with bibtex:
+
+@article{Gouttenoire:2023pxh,
+    author = "Gouttenoire, Yann",
+    title = "{Primordial Black Holes from Conformal Higgs}",
+    eprint = "2311.13640",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "11",
+    year = "2023"
+}
