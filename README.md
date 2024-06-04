@@ -37,9 +37,30 @@ Most of the lines of code are commented to help the user to understand its struc
 
 Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model):
 1) Plot the scalar potential,
+
+<figure>
+  <img src="[https://github.com/james-alvey-42/jaxsp/blob/c23a854ffbaeaa7e81a07ff5d860efd0b212f534/images/leoII.png](https://www.dropbox.com/scl/fi/h6lybs59lrlbd08430h5l/potential.eps?rlkey=lo0u0v3zmp5r5y3a79ii8vsuh&dl=0)" alt="" width="500" align="center">
+  <figcaption align="center">
+  Coleman-Weinberg potential
+  </figcaption>
+</figure>
+<br/><br/>
+
+[https://www.dropbox.com/s/e4l6kx6nhxwxdeh/bounce_action.eps?dl=0](https://www.dropbox.com/scl/fi/h6lybs59lrlbd08430h5l/potential.eps?rlkey=lo0u0v3zmp5r5y3a79ii8vsuh&dl=0)
+
+
 2) Calculate and plot the tunneling trajectory at a given temperature T,
+
+[https://www.dropbox.com/s/8ttyobok063cd3o/bounce_traj.eps?dl=0](https://www.dropbox.com/s/8ttyobok063cd3o/bounce_traj.eps?dl=0)
+
+   
 3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values,
 4) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H.
+
+[https://www.dropbox.com/scl/fi/vm40qyy4acy7r617zhptp/bounce_traj.eps?rlkey=90qt0fqhf3lomy9fzpxdrlia8&dl=0](https://www.dropbox.com/scl/fi/7m346e8642vtdl10efhqv/bounce_action.eps?rlkey=vrdmx7jsh5tzgyb1sf1ylp6bt&dl=0)
+
+**This is a research project. Expect bugs, report bugs, fix more bugs than you
+create.**
 
 ## Cite
 Please cite with bibtex:
