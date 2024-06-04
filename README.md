@@ -77,8 +77,9 @@ Without any modification of the code, you can already use it to perform four tas
 
 
 ## Cite
-Please cite with bibtex:
+If you found the code useful for your project, you can give credit by citing the companion paper:
 
+```console
 @article{Gouttenoire:2023pxh,
     author = "Gouttenoire, Yann",
     title = "{Primordial Black Holes from Conformal Higgs}",
@@ -88,3 +89,4 @@ Please cite with bibtex:
     month = "11",
     year = "2023"
 }
+```
