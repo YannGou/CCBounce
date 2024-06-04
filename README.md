@@ -39,7 +39,7 @@ Without any modification of the code, you can already use it to perform four tas
 1) Plot the scalar potential,
 
 <figure>
-  <img src="output/bounce_action.pdf" width="500" align="center">
+  <img src="https://github.com/YannGou/CCBounce/blob/d9736666eb098b4879c6006cb54d5e37a01658be/output/bounce_action.pdf" width="500" align="center">
   <figcaption align="center">
   Coleman-Weinberg potential
   </figcaption>
