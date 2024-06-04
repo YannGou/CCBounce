@@ -29,6 +29,7 @@ $ apt-get install gnuplot
 ```
 
 The code can be simply runned with the commande "make" typed in a terminal opened in the same directory.
+
 **This is a research project. Expect bugs, report bugs, fix more bugs than you
 create.**
 
