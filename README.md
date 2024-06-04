@@ -6,7 +6,7 @@ src="output/drawing_potential_tunneling.png" alt="logo" width="350"></img>
 ## CCBounce: A C++ code to Calculate Bounce action and tunneling temperature in cosmological first-order phase transition scenarios.
 [**Requirements**](#Requirements)
 | [**Usage**](#Usage)
-| [**Cite**](#Cite)
+| [**Citing**](#Citing)
 
 ## Requirements
 
@@ -79,7 +79,7 @@ Without any modification of the code, you can already use it to perform four tas
 **5) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H**
 
 
-## Cite
+## Citing
 If you found the code useful for your project, you can give credit by citing the companion paper:
 
 ```console
