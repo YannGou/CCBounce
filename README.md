@@ -63,13 +63,11 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-   
 **3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values**
 
    <figure>
   <img src="output/bounce_action.png" width="500" align="center">
   <figcaption align="center">
-  The bounce action for different values of the temperature
   </figcaption>
 </figure>
 <br/><br/>
