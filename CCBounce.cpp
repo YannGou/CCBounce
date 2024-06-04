@@ -766,7 +766,7 @@ double dilEOMSpaceLike1TrajT(double sigma0, double T, double duration, double ma
 }
 
 //Find the bounce trajectory at the nucleation temperature, deduce the nucleation temperature Tnuc and the PT completion rate beta/H
-double dilEOMSpaceLike1Traj(double sigma0, double duration0, double maxSteps, fstream& dat)
+double dilEOMSpaceLike1Traj(double sigma0, double duration0, double maxSteps)
 {
     cout<<" gX "<<gX<<" f "<<f<<" mV "<<gX*f<<endl;
     int n, i,j;
@@ -1037,8 +1037,6 @@ double dilEOMSpaceLike1Traj(double sigma0, double duration0, double maxSteps, fs
     
     //compute beta/H
     betaOH = betaOHfun(action,action2, T/(1+deltabeta), T, gX, f, val);
-    dat<<" "<<endl;
-    dat<<" "<<endl;
         
     //Print gauge coupling, the dark Higgs vev, vector mass, the PT completion rate
     cout<<"   "<<endl;
@@ -1195,34 +1193,35 @@ void dilEOMSpaceLikeS(int nT, double duration0, double maxSteps, fstream& dat)
 //Plot trajectory
 void PlotSpaceLike()
 {
-    fstream gnu("data.gnu", ios::out);
+    fstream gnu("bounce_traj.gnu", ios::out);
     gnu<<"set terminal epscairo font 'Gill Sans' rounded fontscale 0.6"<<endl;
-    gnu<<"set output 'courbe.eps'"<<endl;
+    gnu<<"set output 'bounce_traj.eps'"<<endl;
     gnu<<"set multiplot layout 1, 1"<<endl;
-    gnu<<"set ylabel 'Φ/f'"<<endl;
-    gnu<<"set border 6 back linestyle 100"<<endl;
-    gnu<<"set grid linestyle 100"<<endl;
+    gnu<<"set ylabel 'Φ/v_Φ' font ',15'"<<endl;
+    gnu<<"set border 6 back linestyle 6"<<endl;
+    gnu<<"set grid linestyle 6"<<endl;
     gnu<<"set tmargin 4"<<endl;
     gnu<<"set bmargin 3.1"<<endl;;
     gnu<<"unset xrange"<<endl;
     gnu<<"set size 1, 1"<<endl;
-    gnu<<"set xlabel 'Tn s   with  s^2 = r^2- t^2'"<<endl;
-    gnu<<"set key bottom title 'Bounce trajectory'"<<endl;
-    gnu<<std::setprecision(3)<<"set title 'f = "<<int(f/1000)<<" TeV,  g_X = "<< gX <<",  T/f = "<<T/f<<",  Φ_{0} = "<<sigma0<<"' offset 0, -0.5"<<endl;
-    gnu<<"plot 'data.dat' i 0 u 1:2 w l lc 3 lw 7 title 'Φ/f'"<<endl;
+    gnu<<"set xlabel 'T_n s   with  s^2 = r^2- t^2' font ',15'"<<endl;
+    gnu<<"set key top right box"<<endl;
+    gnu<<"set key font ',14'"<<endl;
+    gnu<<std::setprecision(3)<<"set title 'v_Φ = "<<int(f/1000)<<" TeV,  g_D = "<< gX <<",  T_n/v_Φ = "<<T/f<<",  Φ_{0}/v_Φ = "<<sigma0<<"' offset 0, -0.5"<<endl;
+    gnu<<"plot 'bounce_traj.dat' i 0 u 1:2 w l lc 4 lw 7 title 'Bounce trajectory'"<<endl;
     gnu<<"set key off"<<endl;
     gnu<<"unset key"<<endl;
     gnu<<"unset multiplot"<<endl;
     gnu.close();
     
-    system("gnuplot data.gnu && sleep 2 && open -a preview courbe.eps");
+    system("gnuplot bounce_traj.gnu && sleep 2 && open -a preview bounce_traj.eps");
 }
 
 
 //Plot scalar potential
 void plotPotential()
 {
-    fstream dat("data.dat",ios::out);
+    fstream dat("potential.dat",ios::out);
     //We plot the scalar potential in case you are interested
     double u;
     int npt= 1000;
@@ -1236,57 +1235,61 @@ void plotPotential()
 
     dat.close();
     
-    fstream gnu("data.gnu", ios::out);
+    fstream gnu("potential.gnu", ios::out);
     gnu<<"set terminal epscairo font 'Gill Sans' rounded fontscale 0.6"<<endl;
-    gnu<<"set output 'courbe.eps'"<<endl;
+    gnu<<"set output 'potential.eps'"<<endl;
     gnu<<"set multiplot layout 2, 1"<<endl;
-    gnu<<"set border 6 back linestyle 100"<<endl;
-    gnu<<"set grid linestyle 100"<<endl;;
-    gnu<<"set xlabel 'log_{10}(Φ/f)'"<<endl;
-    gnu<<"set ylabel 'V(Φ)/f^4'"<<endl;
+    gnu<<"set border 6 back linestyle 6"<<endl;
+    gnu<<"set grid linestyle 6"<<endl;;
+    gnu<<"set xlabel 'Φ/v_Φ' font ',15'"<<endl;
+    gnu<<"set ylabel 'V(Φ)/v_Φ^4' font ',15'"<<endl;
     gnu<<"set logscale x"<<endl;
     gnu<<"set xrange [1e-10:1e-5]"<<endl;
     gnu<<"set key bottom left box"<<endl;
-    gnu<<"plot 'data.dat' i 0 u 1:2 w l lc 3 lw 7  title 'potential (zoom)'"<<endl;
+    gnu<<"set key font ',14'"<<endl;
+    gnu<<"plot 'potential.dat' i 0 u 1:2 w l lc 4 lw 7  title 'potential (zoom)'"<<endl;
     gnu<<"unset logscale x"<<endl;
     gnu<<"set xrange [1e-10:1.4]"<<endl;
-    gnu<<"set xlabel 'Φ/f'"<<endl;
+    gnu<<"set xlabel 'Φ/v_Φ' font ',15'"<<endl;
     gnu<<"set key top left box"<<endl;
-    gnu<<"plot 'data.dat' i 0 u 1:2 w l  lc 3 lw 7  title 'potential'"<<endl;
+    gnu<<"set key font ',14'"<<endl;
+    gnu<<"plot 'potential.dat' i 0 u 1:2 w l  lc 4 lw 7  title 'potential'"<<endl;
     gnu<<"unset key"<<endl;
     gnu<<"unset multiplot"<<endl;
     gnu.close();
     
-    system("gnuplot data.gnu  && sleep 4 && open -a preview courbe.eps");
+    system("gnuplot potential.gnu  && sleep 4 && open -a preview potential.eps");
 }
 
 //Plot S3/T tables
-void PlotGeneral()
+void PlotGeneral(int ngX)
 {
-    fstream gnu("data.gnu", ios::out);
+    fstream gnu("bounce_action.gnu", ios::out);
     gnu<<"set terminal epscairo font 'Gill Sans' rounded fontscale 0.6"<<endl;
-    gnu<<"set output 'courbe.eps'"<<endl;
+    gnu<<"set output 'bounce_action.eps'"<<endl;
     gnu<<"set multiplot layout 1, 1"<<endl;
-    gnu<<"set border 6 back linestyle 100"<<endl;
-    gnu<<"set grid linestyle 100"<<endl;;
-    gnu<<"set title 'Bounce action'"<<endl;
+    gnu<<"set border 6 back linestyle 6"<<endl;
+    gnu<<"set grid linestyle 6"<<endl;;
     gnu<<"set size 1, 1"<<endl;
-    gnu<<"set xlabel 'T_{nuc}/f'"<<endl;
-    gnu<<"set ylabel 'S3/T'"<<endl;
+    gnu<<"set xlabel 'T_{n}/v_Φ' font ',15'"<<endl;
+    gnu<<"set ylabel 'S_3/T' font ',15'"<<endl;
     gnu<<"set logscale x"<<endl;
     gnu<<"set format x '10^{%T}'"<<endl;
     gnu<<"set key top left box"<<endl;
-    gnu<<"plot 'data.dat' i 0 u 3:4  w l  lc 3 lw 7   title 'bounce action'";
-    
-    for (int igX=1; igX<=ngX; igX++) {
-        gnu<<", 'data.dat' i "<<igX<<" u 3:4 w l  title 'g_X = "<<iterateLin(igX, ngX, 0.46, 0.6)<<"'";
+    gnu<<"set key font ',14'"<<endl;
+    gnu<<"plot 'bounce_action.dat' i 0 u 3:4  w l  lc 4 lw 7   title 'bounce action'";
+    if(ngX>1)
+    {
+        for (int igX=0; igX<ngX; igX++) {
+            gnu<<", 'bounce_action.dat' i "<<igX<<" u 3:4 w l lc 4 lw 7 title 'g_D = "<<iterateLin(igX, ngX, 0.46, 0.6)<<"'";
+        }
     }
     gnu<<""<<endl;
     gnu<<"unset key"<<endl;
     gnu<<"unset multiplot"<<endl;
     gnu.close();
     
-    system("sleep 2 && gnuplot data.gnu  && sleep 2 && open -a preview courbe.eps");
+    system("sleep 2 && gnuplot bounce_action.gnu  && sleep 2 && open -a preview bounce_action.eps");
 }
 
 
@@ -1316,6 +1319,15 @@ int main()
     vhQCDref = 0.1*GeV;
     //QCD confinement temperature
     TcQCDref = 0.1*GeV;
+    
+    //the dark gauge coupling vev v_phi
+    gX = 0.45;
+    //the dark scalar vev v_phi
+    f = 18*TeV;
+    //the dark vector boson
+    mV = gX*f;
+    Teq = mV/10.85*pow(100/108.75,0.25);
+    T=pow(10,-5.2) * f;
 
     //step in temperature for computing finite difference of the action (for beta/H)
     deltabeta = 0.2;
@@ -1330,63 +1342,49 @@ int main()
 //MODE2: Calculate and plot the bouncing trajectory at a given temperature T
 //MODE3: Compute tables of S3/T for list of values of gauge coupling constant g_X and temperature T
 //MODE4: Calculate the nucleation temperature and the phase transition completion rate \beta/H.
-#define MODE3
-    
+#define MODEALL
 
-#ifdef MODE1
-//MODE1: Plot the scalar potential
-    gX=0.45;
-    mV = 8*TeV;
-    Teq = mV/10.85*pow(100/108.75,0.25);
-    f = mV/gX;
-    T=pow(10,-5.2) * f;
+#if defined MODE1 || defined MODEALL
+//MODE1: Plot the scalar potential with GNUPLOT
     plotPotential();
 #endif
     
-#ifdef MODE2
+#if defined MODE2 || defined MODEALL
 //MODE2: Calculate and plot the bouncing trajectory at a given temperature T
-    fstream dat("data.dat",ios::out);
-    gX=0.45;
-    mV = 8*TeV;
-    Teq = mV/10.85*pow(100/108.75,0.25);
-    f = mV/gX;
-    T=pow(10,-5.2) * f;
-    sigma0=dilEOMSpaceLike1TrajT(0,T, duration, maxSteps, dat);
+//Data file
+    fstream dat1("bounce_traj.dat",ios::out);
+//Calculate bounce trajectory
+    sigma0=dilEOMSpaceLike1TrajT(0,T, duration, maxSteps, dat1);
+//Plot bounce trajectory with GNUPLOT
     PlotSpaceLike();
 #endif
     
-#ifdef MODE3
+#if defined MODE3 || defined MODEALL
 //MODE4: Compute tables of S3/T for list of values of gauge coupling constant g_X and temperature T
+//Data file
+    fstream dat2("bounce_action.dat",ios::out);
 //Number of temperature points
     nT = 100;
 //Number of gauge coupling points (ngX = 1 if one single value of gX)
     ngX = 25;
     ngX = 1;
-    fstream dat("data.dat",ios::out);
     for (int igX=0; igX < ngX; igX++) {
         //for (int iOmega=0; iOmega <= nOmega; iOmega++) {
         gX = iterateLin(igX, ngX, 0.46, 0.6);
         gX=0.45;
-        mV = 8*TeV;
+        f = 18*TeV;
+        mV = gX*f;
         Teq = mV/10.85*pow(100/108.75,0.25);
-        f = mV/gX;
 //Calculate the bounce action as a function of temperature
-        dilEOMSpaceLikeS(nT, duration, maxSteps, dat);
-        dat<<" "<<endl;
-        dat<<" "<<endl;
+        dilEOMSpaceLikeS(nT, duration, maxSteps, dat2);
     }
 //Plot with GNUPLOT
-    PlotGeneral();
+    PlotGeneral(ngX);
 #endif
     
 //MODE4: Calculate the nucleation temperature and the phase transition completion rate \beta/H
-#ifdef MODE4
-    fstream dat("data.dat",ios::out);
-    gX=0.45;
-    mV = 8*TeV;
-    Teq = mV/10.85*pow(100/108.75,0.25);
-    f = mV/gX;
-    sigma0=dilEOMSpaceLike1Traj(0, duration, maxSteps, dat);
+#if defined MODE4 || defined MODEALL
+    sigma0=dilEOMSpaceLike1Traj(0, duration, maxSteps);
 #endif
 
 
