@@ -58,7 +58,7 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-**2) Calculate and plot the tunneling trajectory at a given temperature T**
+**2) Calculate and plot the tunneling trajectory at a given temperature $T$**
 
 <figure>
   <img src="output/bounce_traj.png" width="500" align="center">
@@ -67,7 +67,7 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-**3) Compute tables of bounce action values for a list of gauge coupling constant $g_D$ and temperature T values**
+**3) Compute tables of bounce action values for a list of gauge coupling constant $g_D$ and temperature $T$ values**
 
    <figure>
   <img src="output/bounce_action.png" width="500" align="center">
