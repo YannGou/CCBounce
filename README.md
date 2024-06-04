@@ -24,6 +24,8 @@ $ apt-get install gnuplot
 ```
 
 The code can be simply runned with the commande "make" typed in a terminal opened in the same directory.
+**This is a research project. Expect bugs, report bugs, fix more bugs than you
+create.**
 
 ## Usage
 
@@ -36,28 +38,26 @@ It is straightforward to extend the code to any other phase transition model (sc
 Most of the lines of code are commented to help the user to understand its structure and implement any modifications.
 
 Without any modification of the code, you can already use it to perform four tasks (in the scale-invariant U(1) extension of the Standard Model):
-1) Plot the scalar potential
+**1) Plot the scalar potential**
    
 <figure>
   <img src="output/potential.png" width="500" align="center">
   <figcaption align="center">
-  Coleman-Weinberg potential
   </figcaption>
 </figure>
 <br/><br/>
 
-2) Calculate and plot the tunneling trajectory at a given temperature T
+**2) Calculate and plot the tunneling trajectory at a given temperature T**
 
 <figure>
   <img src="output/bounce_traj.png" width="500" align="center">
   <figcaption align="center"> 
-    The bounce profile at nucleation 
   </figcaption>
 </figure>
 <br/><br/>
 
    
-3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values
+**3) Compute tables of bounce action values for a list of gauge coupling constant g_X and temperature T values**
 
    <figure>
   <img src="output/bounce_action.png" width="500" align="center">
@@ -67,11 +67,8 @@ Without any modification of the code, you can already use it to perform four tas
 </figure>
 <br/><br/>
 
-5) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H
+**5) Calculate the nucleation temperature T_n and the phase transition completion rate \beta/H**
 
-
-**This is a research project. Expect bugs, report bugs, fix more bugs than you
-create.**
 
 ## Cite
 Please cite with bibtex:
