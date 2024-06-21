@@ -80,6 +80,8 @@ Without any modification of the code, you can already use it to perform four tas
 
 **4) Calculate the nucleation temperature $T_n$ and the phase transition completion rate $\beta/H$**
 
+Values of $T_n/v_\phi$ and $\beta/H$ are returned for given model parameters (e.g. $g_D$ and $v_\phi$ for scale-invariant $U(1)_D$ model).
+
 
 <br/><br/>
 
