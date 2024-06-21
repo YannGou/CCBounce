@@ -44,7 +44,7 @@ create.**
 The software calculates the bounce action with an over-shooting/under-shooting method, using Runge-Kutta order 5 with adaptive step-size.
 Then it compares it with the critical action, calculate the nucleation temperature and the phase transition completion rate \beta/H.
 The error on the bounce action and nucleation temperature are calculated and below percent level.
-The code embeds the minimal scale-invariant U(1) extension of the Standard Model studied in https://arxiv.org/pdf/2311.13640.pdf.
+The code embeds the minimal scale-invariant $U(1)_D$ extension of the Standard Model studied in https://arxiv.org/pdf/2311.13640.pdf.
 The scale-invariant $SU(2)_D$ model is also embedded.
 It is straightforward to extend the code to any other phase transition model (scale-invariant or not).
 Most of the lines of code are commented to help the user to understand its structure and implement any modifications.
