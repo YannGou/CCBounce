@@ -34,9 +34,6 @@ $ make
 ```
 typed in a terminal opened in the same directory.
 
-**This is a research project. Expect bugs, report bugs, fix more bugs than you
-create.**
-
 **Contact:** yann.gouttenoire@gmail.com
 
 ## Usage
@@ -92,11 +89,14 @@ If you found the code useful for your project, you can give credit by citing the
 ```console
 @article{Gouttenoire:2023pxh,
     author = "Gouttenoire, Yann",
-    title = "{Primordial Black Holes from Conformal Higgs}",
+    title = "{Primordial black holes from conformal Higgs}",
     eprint = "2311.13640",
     archivePrefix = "arXiv",
     primaryClass = "hep-ph",
-    month = "11",
-    year = "2023"
+    doi = "10.1016/j.physletb.2024.138800",
+    journal = "Phys. Lett. B",
+    volume = "855",
+    pages = "138800",
+    year = "2024"
 }
 ```
